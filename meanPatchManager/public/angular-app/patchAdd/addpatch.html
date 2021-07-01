@@ -1,0 +1,42 @@
+
+<h2>Add new Patch Information</h2> <br/>
+
+<div class="alert alert-danger" ng-if="vm.err" >
+    {{vm.error}}
+</div>
+
+<div class="alert alert-success" ng-if="vm.success" >
+    <h5>{{vm.message}}</h5>
+</div>
+
+<form  ng-submit="vm.addPatch()">
+<fieldset>
+<div class="form-group">
+<label for="name">Name </label> 
+<input name="name" class="form-control" ng-model="vm.name" type="text" id="name" /> 
+</div>
+<div class="form-group">
+    <label for="description">Description </label> 
+    <input name="description" class="form-control" ng-model="vm.description" type="text" id="description" /> 
+</div>
+
+<div class="form-group">
+    <label for="vendor">Vendor </label> 
+    <input name="vendor" class="form-control" ng-model="vm.vendor" type="text" id="vendor" /> 
+</div>
+
+<div class="form-group">
+    <label for="year">Release Year </label> 
+    <input name="year" class="form-control" ng-model="vm.year" type="text" id="year" /> 
+</div>
+
+<br/>
+
+<button class="btn btn-success"  name="submit" ng-model="vm.sub" >Submit </button>
+</fieldset>
+
+
+
+
+
+</form>

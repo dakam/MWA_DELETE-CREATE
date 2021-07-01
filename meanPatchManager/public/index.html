@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="meanPatchManager">
+<head>
+    <title>Patch Management Application</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header  class="col-md-8 offset-md-2">
+        <h1> Patch Management Application</h1>
+
+    </header>
+
+
+
+<div ng-view class="col-md-8 offset-md-2"> </div>
+
+<footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center" >
+                <br>
+            </p>
+        </div>
+
+
+
+    </footer>
+
+  
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="angular-app/app.js"></script>
+    <script src="angular-app/patchesList/patchesController.js"></script>
+    <script src="angular-app/singlePatch/singlePatchController.js"></script>
+    <script src="angular-app/patchFactory/patchFactory.js"></script>
+    <script src="angular-app/patchAdd/addpatchController.js"></script>
+    
+
+</body>
+
+
+</html>

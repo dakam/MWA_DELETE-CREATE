@@ -1,0 +1,48 @@
+
+<div class="alert alert-danger" ng-if="vm.err" >
+    {{vm.error}}
+</div>
+
+<div class="single-outer">
+<header>
+    <H4> Details for Patch : <br/>{{vm.patch.name | uppercase}}  </H4>
+</header>
+
+<div class="card">
+<div class="card-body">
+
+    <p>
+    <span class="title"> Patch name </span>: {{vm.patch.name | uppercase}}<BR/>
+    <span class="title"> description </span>: {{vm.patch.description}}<BR/>
+    <span class="title"> Vendor </span> : {{vm.patch.vendor}}<BR/>
+    <span class="title"> Release year </span> : {{vm.patch.year}}</BR>
+</BR> </BR>
+    <span > Clients  Details</span>
+   
+    <table  class="table" ng-repeat="client in vm.patch.clients track by $index"> 
+        <thead>
+          <tr>
+            <th>Name</th> <th>OS</th> <th>Status</th>
+          </tr>
+        </thead>
+            <tr>
+                <td>{{client.name}}</td> <td>{{client.os}}</td> <td>{{client.status}}</td>
+
+            </tr>
+      
+    </table>  
+    </p>
+<form  ng-submit="vm.deletePatch(vm.patch._id)">
+<fiel>
+    <button class="btn btn-danger" type="submit" id="sub"  >Delete</button>
+</fiel>
+
+</form>
+
+
+
+
+</div>
+ </div>
+
+</div>
